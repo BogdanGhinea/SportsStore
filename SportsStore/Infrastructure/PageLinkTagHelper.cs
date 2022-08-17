@@ -28,10 +28,10 @@ namespace SportsStore.Infrastructure
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
             IUrlHelper urlHelper = urlHelperFactory.GetUrlHelper(ViewContext);
-           //wir habe html pages in div  
+           //wir haben html pages in div  
             TagBuilder result = new TagBuilder("div");
             //wir werden  a(ancor)haben  für jedes Page
-            for (int i = 1; i < PageModel.TotalPages; i++)
+            for (int i = 1; i <= PageModel.TotalPages; i++)
             {
                 TagBuilder tag = new TagBuilder("a");
                 tag.Attributes["href"] = urlHelper.Action(PageAction,
