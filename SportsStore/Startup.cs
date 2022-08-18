@@ -55,9 +55,10 @@ namespace SportsStore
                     defaults: new { controller = "Home", action = "Index" });
 
                 // endpoints.MapDefaultControllerRoute();
+                //Unten ist das gleiche wie ->endpoints.MapDefaultControllerRoute() von Oben
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{ controller}/{action}/{id?}",
+                    pattern: "{controller}/{action}/{id?}",
                     defaults: new { controller = "Home", action = "Index" });
             });
             SeedData.EnsurePopulated(app);

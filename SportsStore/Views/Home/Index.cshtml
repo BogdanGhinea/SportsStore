@@ -7,10 +7,20 @@
 
 @foreach (var item in Model.Products)
 {
-    <div>
-        <h3>@item.Name</h3>
-        @item.Description
-        <h4>@item.Price.ToString("c")</h4>
+    <div class="card card-outline-primary m-1 p-1">
+        <div class="bg-faded p-1">
+            <h4>
+                @item.Name
+                <span class="badge badge-pill badge-primary" style="float:right">
+                    <small>@item.Price.ToString("c")</small>
+                </span>
+            </h4>
+        </div>
+        <div class="card-text p-1">@item.Description</div>
+                
+                
+            
+       
     </div>
 }
 <div page-model=" Model.PagingInfo" page-action="Index"></div>

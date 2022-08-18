@@ -5,6 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="bin\Debug\net5.0\appsettings.Development.json" />
+    <Content Include="bin\Debug\net5.0\appsettings.json" />
+    <Content Include="bin\Debug\net5.0\libman.json" />
+    <Content Include="bin\Debug\net5.0\SportsStore.deps.json" />
+    <Content Include="bin\Debug\net5.0\SportsStore.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\net5.0\SportsStore.runtimeconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -14,6 +23,133 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net5.0\Humanizer.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.Identity.Client.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" />
+    <None Include="bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll" />
+    <None Include="bin\Debug\net5.0\Newtonsoft.Json.dll" />
+    <None Include="bin\Debug\net5.0\ref\SportsStore.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb" />
+    <None Include="bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb" />
+    <None Include="bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb" />
+    <None Include="bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb" />
+    <None Include="bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll" />
+    <None Include="bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll" />
+    <None Include="bin\Debug\net5.0\SportsStore.dll" />
+    <None Include="bin\Debug\net5.0\SportsStore.exe" />
+    <None Include="bin\Debug\net5.0\SportsStore.pdb" />
+    <None Include="bin\Debug\net5.0\SportsStore.Views.dll" />
+    <None Include="bin\Debug\net5.0\SportsStore.Views.pdb" />
+    <None Include="bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll" />
+    <None Include="bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll" />
+    <None Include="bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll" />
+    <None Include="bin\Debug\net5.0\System.Runtime.Caching.dll" />
+    <None Include="bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\alert.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\alert.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\alert.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\button.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\button.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\button.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\carousel.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\carousel.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\carousel.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\collapse.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\collapse.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\collapse.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\dropdown.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\dropdown.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\dropdown.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\index.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\index.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\index.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\modal.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\modal.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\modal.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\popover.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\popover.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\popover.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\scrollspy.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\scrollspy.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\scrollspy.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\tab.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\tab.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\tab.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\toast.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\toast.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\toast.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\tooltip.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\tooltip.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\tooltip.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\util.js" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\util.js.map" />
+    <None Include="wwwroot\lib\bootstrap\js\dist\util.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\alert.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\alert.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\button.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\button.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\carousel.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\carousel.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\collapse.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\collapse.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\dropdown.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\dropdown.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\index.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\index.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\modal.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\modal.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\popover.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\popover.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\scrollspy.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\scrollspy.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\tab.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\tab.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\toast.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\toast.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\tools\sanitizer.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\tools\sanitizer.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\tooltip.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\tooltip.min.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\util.js" />
+    <None Include="wwwroot\lib\bootstrap\js\src\util.min.js" />
   </ItemGroup>
 
 </Project>
