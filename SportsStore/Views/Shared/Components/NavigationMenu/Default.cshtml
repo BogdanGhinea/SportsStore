@@ -1,0 +1,12 @@
+﻿@model IEnumerable<string>
+
+<a asp-controller="Home" asp-action="Index"
+   asp-route-category=""
+   class="btn btn-block btn-outline-secondary">Home</a>
+@foreach (var item in Model)
+{
+    <a asp-controller="Home" asp-action="Index"
+       asp-route-category="@item"
+       asp-route-productPage ="1"
+       class="btn btn-block btn-outline-secondary">@item</a>
+}
