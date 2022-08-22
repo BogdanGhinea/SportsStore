@@ -32,6 +32,9 @@ namespace SportsStore
                     Configuration["ConnectionStrings:SportsStoreConnection"]);
             });
             services.AddScoped<IStoreRepository, EFStoreReository>();
+            services.AddRazorPages();
+            services.AddDistributedMemoryCache();
+            services.AddSession();
            
         }
 
@@ -44,6 +47,8 @@ namespace SportsStore
             }
             app.UseStatusCodePages();
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 
@@ -75,6 +80,8 @@ namespace SportsStore
                     name: "default",
                     pattern: "{controller}/{action}/{id?}",
                     defaults: new { controller = "Home", action = "Index" });
+
+                endpoints.MapRazorPages();
             });
             SeedData.EnsurePopulated(app);
         }
