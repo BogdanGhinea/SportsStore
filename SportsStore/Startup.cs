@@ -51,7 +51,7 @@ namespace SportsStore
             {
                 endpoints.MapControllerRoute(
                     name: "catpage",
-                    pattern: "{category}/Page{productPage }",
+                    pattern: "{category}/Page{productPage}",
                     defaults: new { controller = "Home", action = "Index" });
                 endpoints.MapControllerRoute(
                     name: "page",
