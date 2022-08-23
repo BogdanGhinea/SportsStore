@@ -39,6 +39,12 @@ namespace SportsStore.Models
         {
             Lines.Clear();
         }
+        public virtual  void SetQuantity(long productId,int quantity)
+        {
+            CartLine line = Lines
+                            .First(cl=> cl.Product.ProductId == productId);
+            line.Quantity = quantity;
+        }
     }
 
 }

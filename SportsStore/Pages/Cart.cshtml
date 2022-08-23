@@ -18,10 +18,41 @@
     @foreach (var item in Model.Cart.Lines)
     {
         <tr>
-             <td class=" text-center">@item.Quantity</td>
-             <td class=" text-left">@item.Product.Name</td>
-             <td class=" text-right">@item.Product.Price.ToString("c")</td>
-             <td class=" text-right">@((item.Quantity * item.Product.Price).ToString("c"))</td>
+            <td class="text-center">
+                <div class="btn-group">
+                    <form asp-page-handler="Decrease" method="post">
+                        <input type="hidden" name="ProductId"
+                               value="@item.Product.ProductId" />
+                        <input type="hidden" name="returnUrl"
+                               value="@Model.ReturnUrl" />
+                        <button type="submit" class="btn btn-sm btn-secondary">-</button>
+                    </form>
+                    <span class="px-3" style="padding:5px ; "> @item.Quantity</span>
+
+                    <form asp-page-handler="Increse" method="post">
+                        <input type="hidden" name="ProductId"
+                               value="@item.Product.ProductId" />
+                        <input type="hidden" name="returnUrl"
+                               value="@Model.ReturnUrl" />
+                        <button type="submit" class="btn btn-sm btn-secondary">+</button>
+                    </form>
+                </div>
+            </td>
+
+            <td class=" text-left">@item.Product.Name</td>
+            <td class=" text-right">@item.Product.Price.ToString("c")</td>
+            <td class=" text-right">@((item.Quantity * item.Product.Price).ToString("c"))</td>
+            <td class="text-center">
+
+
+                <form asp-page-handler="Remove" method="post">
+                    <input type="hidden" name="ProductId"
+                           value="@item.Product.ProductId" />
+                    <input type="hidden" name="returnUrl"
+                           value="@Model.ReturnUrl" />
+                    <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                </form>
+            </td>
         </tr>
     }
      </tbody>
