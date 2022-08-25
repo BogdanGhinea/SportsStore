@@ -7,38 +7,31 @@ using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace SportsStore.Models
-{
-    public class SessionCart : Cart
-    {
+namespace SportsStore.Models {
+    public class SessionCart : Cart {
         [JsonIgnore]
         public ISession Session { get; set; }
 
-        public static Cart GetCart(IServiceProvider services)
-        {
+        public static Cart GetCart(IServiceProvider services) {
             ISession session = services.GetRequiredService<IHttpContextAccessor>()?
                 .HttpContext.Session;
             SessionCart cart = session?.GetJson<SessionCart>("cart") ?? new SessionCart();
             cart.Session = session;
             return cart;
         }
-        public override void AddItem(Product product, int quantity)
-        {
+        public override void AddItem(Product product, int quantity) {
             base.AddItem(product, quantity);
-            Session.SetJson("cart",this);
+            Session.SetJson("cart", this);
         }
-        public override void RemoveLine(Product product)
-        {
+        public override void RemoveLine(Product product) {
             base.RemoveLine(product);
             Session.SetJson("cart", this);
         }
-        public override void Clear()
-        {
+        public override void Clear() {
             base.Clear();
             Session.Remove("cart");
         }
-        public override void SetQuantity(long productId, int quantity)
-        {
+        public override void SetQuantity(long productId, int quantity) {
             base.SetQuantity(productId, quantity);
             Session.SetJson("cart", this);
         }

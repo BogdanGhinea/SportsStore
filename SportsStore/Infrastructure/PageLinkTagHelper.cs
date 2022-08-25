@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
@@ -7,63 +8,44 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 
-namespace SportsStore.Infrastructure
-{
-    //mussen wir es in einem div elemen setzen mit de page -model name
-    [HtmlTargetElement("div",Attributes = "page-model")]
-    public class PageLinkTagHelper : TagHelper
-    {
+namespace SportsStore.Infrastructure {
+    [HtmlTargetElement("div", Attributes = "page-model")]
+    public class PageLinkTagHelper : TagHelper {
         private IUrlHelperFactory urlHelperFactory;
-
-    public PageLinkTagHelper(IUrlHelperFactory helperFactory)
-        {
-            //der href(url) zu 1 2 3 seiten in Index
+        public PageLinkTagHelper(IUrlHelperFactory helperFactory) {
             urlHelperFactory = helperFactory;
-
         }
-        [ViewContext]               //unter View Context kann man html manipulieren
+        [ViewContext]
         [HtmlAttributeNotBound]
-        //zeigt uns auch das view context
         public ViewContext ViewContext { get; set; }
-        //wie seht aus(PageInfo)
         public PagingInfo PageModel { get; set; }
-        //wo soll er gehen (page-action)
         public string PageAction { get; set; }
         public bool PageClassesEnabled { get; set; } = false;
         public string PageClass { get; set; }
         public string PageClassNormal { get; set; }
         public string PageClassSelected { get; set; }
+
         [HtmlAttributeName(DictionaryAttributePrefix ="page-url-")]
         public Dictionary<string, object> PageUrlValues { get; set; }
             = new Dictionary<string, object>();
 
-
-
-
-        public override void Process(TagHelperContext context, TagHelperOutput output)
-        {
+        public override void Process(TagHelperContext context, 
+                TagHelperOutput output) {
             IUrlHelper urlHelper = urlHelperFactory.GetUrlHelper(ViewContext);
-           //wir haben html page in div  
             TagBuilder result = new TagBuilder("div");
-            //wir werden  a(ancor)haben  für jedes Page
-            for (int i = 1; i <= PageModel.TotalPages; i++)
-            {
+            for (int i = 1; i <= PageModel.TotalPages; i++) {
                 TagBuilder tag = new TagBuilder("a");
 
                 PageUrlValues["productPage"] = i;
-                tag.Attributes["href"] = urlHelper.Action(PageAction,PageUrlValues);
+                tag.Attributes["href"] = urlHelper.Action(PageAction, PageUrlValues);
 
-                if (PageClassesEnabled)
-                {
+                if (PageClassesEnabled) {
                     tag.AddCssClass(PageClass);
-                    if (i == PageModel.CurrentPage)
-                    {
+                    if (i == PageModel.CurrentPage) {
                         tag.AddCssClass(PageClassSelected);
                     }
-                    else
-                    {
+                    else {
                         tag.AddCssClass(PageClassNormal);
                     }
                 }

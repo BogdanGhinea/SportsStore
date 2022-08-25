@@ -1,61 +1,64 @@
 ﻿@page
 @model CartModel
+
 @{
     ViewBag.Title = "Cart";
 }
-<h2>Your cart</h2>
 
-<table class=" table table-bordered table-striped"  >
+<h2>Your cart</h2>
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>Quantity</th>
             <th>Item</th>
-            <th class=" text-md-right">Price</th>
-            <th class=" text-md-right">Subtotal</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">Subtotal</th>
+            <th></th>
         </tr>
-    </thead> 
+    </thead>
     <tbody>
-    @foreach (var item in Model.Cart.Lines)
-    {
-        <tr>
-            <td class="text-center">
-                <div class="btn-group">
-                    <form asp-page-handler="Decrease" method="post">
-                        <input type="hidden" name="ProductId"
-                               value="@item.Product.ProductId" />
+        @foreach (var item in Model.Cart.Lines) {
+            <tr>
+                <td class="text-center">
+                    <div class="btn-group">
+                        <form asp-page-handler="Decrease" method="post">
+                            <input type="hidden" name="ProductID"
+                                   value="@item.Product.ProductID" />
+                            <input type="hidden" name="returnUrl"
+                                   value="@Model.ReturnUrl" />
+                            <button type="submit" class="btn btn-sm btn-secondary">
+                                -
+                            </button>
+                        </form>
+                        <span class="px-3">@item.Quantity</span>
+                        <form asp-page-handler="Increase" method="post">
+                            <input type="hidden" name="ProductID"
+                                   value="@item.Product.ProductID" />
+                            <input type="hidden" name="returnUrl"
+                                   value="@Model.ReturnUrl" />
+                            <button type="submit" class="btn btn-sm btn-secondary">
+                                +
+                            </button>
+                        </form>
+                    </div>
+                </td>
+                <td class="text-left">@item.Product.Name</td>
+                <td class="text-right">@item.Product.Price.ToString("c")</td>
+                <td class="text-right">@((item.Quantity * item.Product.Price).ToString("c"))</td>
+                <td class="text-center">
+                    <form asp-page-handler="Remove" method="post">
+                        <input type="hidden" name="ProductID"
+                               value="@item.Product.ProductID" />
                         <input type="hidden" name="returnUrl"
                                value="@Model.ReturnUrl" />
-                        <button type="submit" class="btn btn-sm btn-secondary">-</button>
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            Remove
+                        </button>
                     </form>
-                    <span class="px-3" style="padding:5px ; "> @item.Quantity</span>
-
-                    <form asp-page-handler="Increse" method="post">
-                        <input type="hidden" name="ProductId"
-                               value="@item.Product.ProductId" />
-                        <input type="hidden" name="returnUrl"
-                               value="@Model.ReturnUrl" />
-                        <button type="submit" class="btn btn-sm btn-secondary">+</button>
-                    </form>
-                </div>
-            </td>
-
-            <td class=" text-left">@item.Product.Name</td>
-            <td class=" text-right">@item.Product.Price.ToString("c")</td>
-            <td class=" text-right">@((item.Quantity * item.Product.Price).ToString("c"))</td>
-            <td class="text-center">
-
-
-                <form asp-page-handler="Remove" method="post">
-                    <input type="hidden" name="ProductId"
-                           value="@item.Product.ProductId" />
-                    <input type="hidden" name="returnUrl"
-                           value="@Model.ReturnUrl" />
-                    <button type="submit" class="btn btn-sm btn-danger">Remove</button>
-                </form>
-            </td>
-        </tr>
-    }
-     </tbody>
+                </td>
+            </tr>
+        }
+    </tbody>
     <tfoot>
         <tr>
             <td colspan="3" class="text-right">Total:</td>
@@ -65,7 +68,6 @@
 </table>
 
 <div class="text-center">
-    <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
-
+    <a class="btn btn-primary" href="@Model.ReturnUrl">Continue shopping</a>
+    <a class="btn btn-primary" asp-action="Checkout" asp-controller="Order">Checkout</a>
 </div>
-

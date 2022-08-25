@@ -4,11 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SportsStore.Models
-{
-    public class Product
-    {
-        public long ProductId { get; set; }
+namespace SportsStore.Models {
+    public class Product {
+        public long ProductID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         [Column(TypeName ="decimal(8,2)")]

@@ -1,0 +1,16 @@
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\bin\Debug\net5.0\Konstruktoren.exe
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\bin\Debug\net5.0\Konstruktoren.deps.json
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\bin\Debug\net5.0\Konstruktoren.runtimeconfig.json
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\bin\Debug\net5.0\Konstruktoren.runtimeconfig.dev.json
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\bin\Debug\net5.0\Konstruktoren.dll
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\bin\Debug\net5.0\ref\Konstruktoren.dll
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\bin\Debug\net5.0\Konstruktoren.pdb
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\obj\Debug\net5.0\Konstruktoren.csproj.AssemblyReference.cache
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\obj\Debug\net5.0\Konstruktoren.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\obj\Debug\net5.0\Konstruktoren.AssemblyInfoInputs.cache
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\obj\Debug\net5.0\Konstruktoren.AssemblyInfo.cs
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\obj\Debug\net5.0\Konstruktoren.csproj.CoreCompileInputs.cache
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\obj\Debug\net5.0\Konstruktoren.dll
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\obj\Debug\net5.0\ref\Konstruktoren.dll
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\obj\Debug\net5.0\Konstruktoren.pdb
+C:\Projekte\C#\Do3\SportsStoreDo3\Konstruktoren\obj\Debug\net5.0\Konstruktoren.genruntimeconfig.cache

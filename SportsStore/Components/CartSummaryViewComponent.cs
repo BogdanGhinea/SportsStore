@@ -5,17 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SportsStore.Components
-{
-    public class CartSummaryViewComponent : ViewComponent
-    {
+namespace SportsStore.Components {
+    public class CartSummaryViewComponent : ViewComponent {
         private Cart cart;
-        public CartSummaryViewComponent (Cart cartService)
-        {
+        public CartSummaryViewComponent(Cart cartService) {
             cart = cartService;
         }
-        public IViewComponentResult Invoke()
-        {
+        public IViewComponentResult Invoke() {
             return View(cart);
         }
     }
